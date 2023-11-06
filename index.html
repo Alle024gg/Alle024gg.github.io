@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexandra</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Alexandra</h1>
+      <img height="150" src="images/Untitled 3.png" alt="selfie" />
+      <p id="job-title">Specialist marketing online</p>
+
+      <ul id="top-menu-bar">
+        <li><a href="#" class="active">HOME</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#"> Projects</a></li>
+        <li><a href="#">Languages</a></li>
+      </ul>
+    </header>
+
+    <section id="content">
+      <div id="side-menu">
+        <section>
+          <form action="secretara.html">
+            <h2>Contact</h2>
+            <div>
+              <label for="userEmail">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="userEmail"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="userName">Your Name</label>
+              <input
+                type="text"
+                name="name"
+                id="userName"
+                type="text"
+                name="name"
+                id="userName"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </section>
+        <section>
+          <p>
+            start server: Command + shift + p ->Browser sync mode in browser ->
+            Enter -> / -> Enter
+          </p>
+        </section>
+      </div>
+      <div id="main">
+        <h2>Skills</h2>
+        <ul>
+          <li class="favorite">HTML</li>
+          <li>CSS</li>
+          <li class="favorite">JS</li>
+        </ul>
+
+        <h2>Know Languages</h2>
+        <table border="1">
+          <tr>
+            <th>Languages</th>
+            <th>Level</th>
+          </tr>
+          <tr>
+            <td>Romanian</td>
+            <td>Native</td>
+          </tr>
+          <tr>
+            <td>Enghish</td>
+            <td>Profesional</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <footer>
+      Open my
+      <a
+        href="https://www.linkedin.com/in/alexandra-calotă-91a23426a/"
+        target="_blank"
+        >Linkedin</a
+      >
+    </footer>
+
+    <script>
+      console.info(2 + 3);
+      console.warn("Alexandra");
+
+      var employed = true;
+      var age = 18;
+      console.log("angajat:", employed);
+      employed = false;
+      console.log("angajat:", employed);
+      employed = "da";
+      console.log("angajat:", employed);
+
+      var skills = ["html", "css"];
+      skills;
+
+      typeof skills;
+      console.debug("tipul variabilei skills", typeof skills);
+
+      var job = document.getElementById("job-title");
+      console.warn("job:", job);
+      console.info(typeof job);
+    </script>
+  </body>
+</html>
