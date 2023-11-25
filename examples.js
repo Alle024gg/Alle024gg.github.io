@@ -26,3 +26,16 @@ function updateTitle(title) {
 }
 variablesExamples();
 updateTitle("Developer");
+
+window.onscroll = function () {
+  myFunction();
+};
+
+var navbar = document.getElementById("navbar");
+
+var sticky = navbar.offsetTop;
+function myFunction() {
+  if (window.pageY0ffset >= sticky) {
+    navbar.classList.add("sticky");
+  }
+}
