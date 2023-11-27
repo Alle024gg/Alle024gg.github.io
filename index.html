@@ -9,15 +9,22 @@
   </head>
   <body>
     <header>
-      <h1>Alexandra</h1>
-      <img height="150" src="images/Untitled 3.png" alt="selfie" />
-      <p id="job-title">Specialist marketing online</p>
+      <div style="display: flex">
+        <div>
+          <img height="150" src="images/Untitled 3.png" alt="selfie" />
+        </div>
+        <div>
+          <h1>Alexandra</h1>
+          <p id="job-title">Specialist marketing online</p>
+        </div>
+      </div>
 
       <ul id="top-menu-bar">
         <li><a href="#">HOME</a></li>
         <li><a href="#">Skills</a></li>
         <li><a href="#" class="active">Projects</a></li>
-        <li><a href="#">Languages</a></li>
+        <li><a href="#" onclick="showlanguages()">Languages</a></li>
+        <!-- showlanguages - arata cand dam click zona -->
       </ul>
     </header>
 
@@ -80,7 +87,7 @@
           <p>...</p>
         </div>
 
-        <div style="display: none">
+        <div style="display: none" id="languages">
           <h2>Know Languages</h2>
           <table border="1">
             <tr>
