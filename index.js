@@ -16,13 +16,13 @@ function hide(id) {
 function showHOME() {
   hide(activPage);
   show("HOME");
-  activePage = "home";
+  activePage = "HOME";
 }
 
 function showSkills() {
   hide(activePage);
   show("Skills");
-  activePage = "skills";
+  activePage = "Skills";
 }
 
 function showProjects() {
