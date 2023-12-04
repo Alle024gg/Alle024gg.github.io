@@ -1,15 +1,22 @@
+function show(id) {
+  console.info("show", id);
+
+  var page = document.getElementById(id);
+  console.info("page", page);
+  page.style.display = "block";
+}
+
 function hide(id) {
   console.info("hide", id);
   document.getElementById(id).style.display = "none";
 }
 
 function showHOME() {
-  hide("skills");
+  hide("Skills");
   hide("Projects");
   hide("Languages");
 
-  var page = document.getElementById("HOME");
-  page.style.display = "block";
+  show("HOME");
 }
 
 function showSkills() {
@@ -17,8 +24,7 @@ function showSkills() {
   hide("Projects");
   hide("Languages");
 
-  var page = document.getElementById("Skills");
-  page.style.display = "block";
+  show("Skills");
 }
 
 function showProjects() {
@@ -26,8 +32,7 @@ function showProjects() {
   hide("Skills");
   hide("Languages");
 
-  var page = document.getElementById("Projects");
-  page.style.display = "block";
+  show("Projects");
 }
 
 function showLanguages() {
@@ -35,6 +40,5 @@ function showLanguages() {
   hide("Skills");
   hide("Projects");
 
-  var page = document.getElementById("Languages");
-  page.style.display = "block";
+  show("Languages");
 }
