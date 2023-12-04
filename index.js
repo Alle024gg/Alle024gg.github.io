@@ -14,7 +14,7 @@ function hide(id) {
 }
 
 function showHOME() {
-  hide(activPage);
+  hide(activePage);
   show("HOME");
   activePage = "HOME";
 }
