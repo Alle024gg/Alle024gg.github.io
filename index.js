@@ -13,10 +13,15 @@ function hide(id) {
   document.getElementById(id).style.display = "none";
 }
 
-function showHOME() {
+function showPage(id) {
+  console.info("show page", id);
   hide(activePage);
-  show("HOME");
-  activePage = "HOME";
+  show(id);
+  activePage = id;
+}
+
+function showHOME() {
+  showPage("HOME");
 }
 
 function showSkills() {
