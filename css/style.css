@@ -81,6 +81,7 @@ footer {
 }
 
 .page {
+  display: none;
   flex: 1;
   background-color: #fff;
   padding: 24px;
