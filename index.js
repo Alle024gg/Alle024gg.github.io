@@ -1,3 +1,4 @@
+//variabile publice
 var activePage = "Projects";
 
 function show(id) {
@@ -42,5 +43,15 @@ function showLanguages() {
   activePage = "Languages";
 }
 
+function initEvents() {
+  var toolbar = document.querySelector("#top-menu-bar");
+  toolbar.addEventListener("click", function (e) {
+    var page = e.target.innerHTML.toLowerCase();
+    console.warn("event", page);
+    showPage(page);
+  });
+}
+
 //executii
 showPage(activePage);
+initEvents();
