@@ -7,7 +7,7 @@ function show(id) {
   console.info("page", page);
   page.style.display = "block";
 }
-
+//functii pubice
 function hide(id) {
   console.info("hide", id);
   document.getElementById(id).style.display = "none";
@@ -41,3 +41,6 @@ function showLanguages() {
   show("Languages");
   activePage = "Languages";
 }
+
+//executii
+showPage(activePage);
