@@ -1,5 +1,5 @@
 //variabile publice
-var activePage = "Projects";
+var activePage = "projects";
 
 function show(id) {
   console.info("show", id);
@@ -22,25 +22,25 @@ function showPage(id) {
 }
 
 function showHOME() {
-  showPage("HOME");
+  showPage("home");
 }
 
 function showSkills() {
   hide(activePage);
-  show("Skills");
-  activePage = "Skills";
+  show("skills");
+  activePage = "skills";
 }
 
 function showProjects() {
   hide(activePage);
-  show("Projects");
-  activePage = "Projects";
+  show("projects");
+  activePage = "projects";
 }
 
 function showLanguages() {
   hide(activePage);
-  show("Languages");
-  activePage = "Languages";
+  show("languages");
+  activePage = "languages";
 }
 
 function initEvents() {
