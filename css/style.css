@@ -157,3 +157,31 @@ li.favorite {
 td.favorite {
   font-weight: normal;
 }
+
+.titlu_aplicatie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.plant-text {
+  text-align: center;
+}
+
+.coperta_planta {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}
+
+.genereaza {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+/* exercitii */

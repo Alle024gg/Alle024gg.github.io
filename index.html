@@ -202,12 +202,78 @@
             <button type="submit">Send</button>
           </form>
         </section>
-        <section>
-          <p>
-            start server: Command + shift + p ->Browser sync mode in browser ->
-            Enter -> / -> Enter
-          </p>
+
+        <section class="planta">
+          <div class="titlu_aplicatie">
+            <p class="plant-text">
+              See what kind of plant you are today<br />
+              🔽
+            </p>
+          </div>
+
+          <div class="coperta_planta">
+            <img id="plantImage" src="images/first .png" alt="plant image" />
+          </div>
+
+          <div class="genereaza">
+            <button id="genereazaButton">See what plant U are</button>
+          </div>
         </section>
+
+        <script>
+          const changegenereazaButton =
+            document.getElementById("genereazaButton");
+          const plantImage = document.getElementById("plantImage");
+          const images = [
+            "images/1.png",
+            "images/2.png",
+            "images/3.png",
+            "images/4.png",
+            "images/5.png",
+            "images/6.png",
+            "images/7.png",
+          ];
+          let originalButton = changegenereazaButton.cloneNode(true);
+
+          changegenereazaButton.addEventListener("click", function () {
+            const plantaSection = document.querySelector(".planta");
+            const copertaPlanta = document.querySelector(".coperta_planta");
+            plantaSection.removeChild(copertaPlanta);
+
+            const randomImage =
+              images[Math.floor(Math.random() * images.length)];
+
+            const newImageContainer = document.createElement("div");
+            newImageContainer.classList.add("coperta_planta");
+            const newImage = document.createElement("img");
+            newImage.src = randomImage;
+            newImage.alt = "Plant Image";
+            newImageContainer.appendChild(newImage);
+            plantaSection.appendChild(newImageContainer);
+
+            const altTexts = ["aici", "acol", "acum"];
+            const randomAltText =
+              altTexts[Math.floor(Math.random() * altTexts.length)];
+            newImage.alt = randomAltText;
+
+            changegenereazaButton.textContent = "See again";
+
+            changegenereazaButton.addEventListener("click", function () {
+              plantaSection.removeChild(newImageContainer);
+              const originalImageContainer = document.createElement("div");
+              originalImageContainer.classList.add("coperta_planta");
+              const originalImage = document.createElement("img");
+              originalImage.src = "images/first.png";
+              originalImage.alt = "Plant Image";
+              originalImageContainer.appendChild(originalImage);
+              plantaSection.replaceChild(
+                originalImageContainer,
+                changegenereazaButton
+              );
+              changegenereazaButton.textContent = "See what plant U are";
+            });
+          });
+        </script>
       </div>
       <div id="main">
         <div id="home" class="page">

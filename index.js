@@ -53,5 +53,3 @@ function initEvents() {
 }
 
 //executii
-showPage(activePage);
-initEvents();
