@@ -1,17 +1,17 @@
-//variabile publice
+// variable publice
 var activePage = "projects";
 
-function show(id) {
-  console.info("show", id);
-
-  var page = document.getElementById(id);
-  console.info("page", page);
-  page.style.display = "block";
-}
-//functii pubice
+// functii publice
 function hide(id) {
   console.info("hide", id);
   document.getElementById(id).style.display = "none";
+}
+
+function show(id) {
+  console.info("show", id);
+  var page = document.getElementById(id);
+  console.debug("show page", page);
+  page.style.display = "block";
 }
 
 function showPage(id) {
@@ -19,28 +19,6 @@ function showPage(id) {
   hide(activePage);
   show(id);
   activePage = id;
-}
-
-function showHOME() {
-  showPage("home");
-}
-
-function showSkills() {
-  hide(activePage);
-  show("skills");
-  activePage = "skills";
-}
-
-function showProjects() {
-  hide(activePage);
-  show("projects");
-  activePage = "projects";
-}
-
-function showLanguages() {
-  hide(activePage);
-  show("languages");
-  activePage = "languages";
 }
 
 function initEvents() {
@@ -52,4 +30,6 @@ function initEvents() {
   });
 }
 
-//executii
+// excutii
+showPage(activePage);
+initEvents();
