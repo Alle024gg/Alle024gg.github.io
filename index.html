@@ -9,147 +9,6 @@
   </head>
   <body>
     <header>
-      <style>
-        /* zapada*/
-        .snowflake {
-          color: #fff;
-          font-size: 1em;
-          font-family: Arial, sans-serif;
-          text-shadow: 0 0 5px #000;
-        }
-
-        @-webkit-keyframes snowflakes-fall {
-          0% {
-            top: -10%;
-          }
-          100% {
-            top: 100%;
-          }
-        }
-        @-webkit-keyframes snowflakes-shake {
-          0%,
-          100% {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-          }
-          50% {
-            -webkit-transform: translateX(80px);
-            transform: translateX(80px);
-          }
-        }
-        @keyframes snowflakes-fall {
-          0% {
-            top: -10%;
-          }
-          100% {
-            top: 100%;
-          }
-        }
-        @keyframes snowflakes-shake {
-          0%,
-          100% {
-            transform: translateX(0);
-          }
-          50% {
-            transform: translateX(80px);
-          }
-        }
-        .snowflake {
-          position: fixed;
-          top: -10%;
-          z-index: 9999;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-          cursor: default;
-          -webkit-animation-name: snowflakes-fall, snowflakes-shake;
-          -webkit-animation-duration: 10s, 3s;
-          -webkit-animation-timing-function: linear, ease-in-out;
-          -webkit-animation-iteration-count: infinite, infinite;
-          -webkit-animation-play-state: running, running;
-          animation-name: snowflakes-fall, snowflakes-shake;
-          animation-duration: 10s, 3s;
-          animation-timing-function: linear, ease-in-out;
-          animation-iteration-count: infinite, infinite;
-          animation-play-state: running, running;
-        }
-        .snowflake:nth-of-type(0) {
-          left: 1%;
-          -webkit-animation-delay: 0s, 0s;
-          animation-delay: 0s, 0s;
-        }
-        .snowflake:nth-of-type(1) {
-          left: 10%;
-          -webkit-animation-delay: 1s, 1s;
-          animation-delay: 1s, 1s;
-        }
-        .snowflake:nth-of-type(2) {
-          left: 20%;
-          -webkit-animation-delay: 6s, 0.5s;
-          animation-delay: 6s, 0.5s;
-        }
-        .snowflake:nth-of-type(3) {
-          left: 30%;
-          -webkit-animation-delay: 4s, 2s;
-          animation-delay: 4s, 2s;
-        }
-        .snowflake:nth-of-type(4) {
-          left: 40%;
-          -webkit-animation-delay: 2s, 2s;
-          animation-delay: 2s, 2s;
-        }
-        .snowflake:nth-of-type(5) {
-          left: 50%;
-          -webkit-animation-delay: 8s, 3s;
-          animation-delay: 8s, 3s;
-        }
-        .snowflake:nth-of-type(6) {
-          left: 60%;
-          -webkit-animation-delay: 6s, 2s;
-          animation-delay: 6s, 2s;
-        }
-        .snowflake:nth-of-type(7) {
-          left: 70%;
-          -webkit-animation-delay: 2.5s, 1s;
-          animation-delay: 2.5s, 1s;
-        }
-        .snowflake:nth-of-type(8) {
-          left: 80%;
-          -webkit-animation-delay: 1s, 0s;
-          animation-delay: 1s, 0s;
-        }
-        .snowflake:nth-of-type(9) {
-          left: 90%;
-          -webkit-animation-delay: 3s, 1.5s;
-          animation-delay: 3s, 1.5s;
-        }
-        .snowflake:nth-of-type(10) {
-          left: 25%;
-          -webkit-animation-delay: 2s, 0s;
-          animation-delay: 2s, 0s;
-        }
-        .snowflake:nth-of-type(11) {
-          left: 65%;
-          -webkit-animation-delay: 4s, 2.5s;
-          animation-delay: 4s, 2.5s;
-        }
-      </style>
-      <div class="snowflakes" aria-hidden="true">
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-      </div>
-
       <div style="display: flex">
         <div>
           <img height="150" src="images/Untitled 3.png" alt="selfie" />
@@ -283,16 +142,139 @@
 
         <div id="skills" class="page">
           <h2>Skills</h2>
-          <ul>
-            <li class="favorite">HTML</li>
-            <li>CSS</li>
-            <li class="favorite">JS</li>
-          </ul>
+          <div class="art">
+            <h2>Artistic Skills:</h2>
+            <ul>
+              <li>Painting</li>
+              <li>Jewelry Making</li>
+              <li>Sketching and Illustration</li>
+              <li>
+                Graphic Design (logos, promotional materials, graphics for
+                various products)
+              </li>
+            </ul>
+          </div>
+
+          <div class="digital">
+            <h2>Design and Digital Graphics:</h2>
+            <ul>
+              <li style="list-style: none"></li>
+              <li>
+                Animation and digital illustrations (
+                <img
+                  src="https://assets.procreate.art/img/procreate-icon-search-display.png"
+                  alt="Logo Procreate"
+                  style="width: 50px; height: 50px; vertical-align: middle"
+                />,
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/2101px-Adobe_Photoshop_CC_icon.svg.png"
+                  alt="Logo Photoshop"
+                  style="width: 50px; height: 50px; vertical-align: middle"
+                />,
+                <img
+                  src="https://cdn.sanity.io/images/599r6htc/localized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=804&h=804&q=75&fit=max&auto=format"
+                  alt="Logo Figma"
+                  style="width: 50px; height: 50px; vertical-align: middle"
+                />
+                )
+              </li>
+              <li>Creating and printing designs for personalized products</li>
+            </ul>
+          </div>
+
+          <div class="tehnical">
+            <h2>Technical Skills and Education:</h2>
+            <ul>
+              <li>
+                Studies in Marketing and Management (Bachelor's and Master's
+                degrees)
+              </li>
+              <li>Skills in time and project management</li>
+              <li>Experience in sales and entrepreneurship</li>
+              <li>Teaching certification</li>
+            </ul>
+          </div>
+
+          <div class="other">
+            <h2>Other Skills:</h2>
+            <ul>
+              <li>
+                Knowledge of programming and web design (HTML, CSS, JavaScript)
+              </li>
+              <li>Multitasking and time management abilities</li>
+              <li>Capability to work under pressure and self-motivate</li>
+              <li>Experience in using online business platforms and tools</li>
+            </ul>
+          </div>
         </div>
 
         <div id="projects" class="page">
           <h2>Projects</h2>
-          <p>...</p>
+
+          <div class="image-gallery">
+            <div class="image-container">
+              <img
+                src="https://pbs.twimg.com/media/FfsPsCTXEAA-hK1.jpg"
+                alt="imagine 1"
+              />
+            </div>
+
+            <div class="image-container">
+              <img
+                src="https://creator.iqads.ro/uploads/creations/52/6803_main.gif"
+                alt="Imagine 2"
+              />
+            </div>
+
+            <div class="image-container">
+              <img
+                src="https://pbs.twimg.com/media/Fec3GJWXwAIPpen.jpg"
+                alt="Imagine 3"
+              />
+            </div>
+
+            <div class="image-container">
+              <img
+                src="https://scontent.fotp3-1.fna.fbcdn.net/v/t39.30808-6/395397117_828229369309537_8856751393902477801_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=3635dc&_nc_ohc=ueRY-oSvXosAX_Jl4G9&_nc_ht=scontent.fotp3-1.fna&oh=00_AfCWHd95JzcvK_qEDeCyVGXtfFlXCp2Sua9skDextKqg7A&oe=65A18700"
+                alt="Imagine 4"
+              />
+            </div>
+
+            <div class="image-container">
+              <img
+                src="https://scontent.fotp3-4.fna.fbcdn.net/v/t39.30808-6/391753111_818874123578395_6703114614943236792_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=3635dc&_nc_ohc=63d-VKYM4w4AX-TwCx-&_nc_ht=scontent.fotp3-4.fna&oh=00_AfBWDVTM8PHO_kmPpw03KdKoUsmdH3l77rR-aPj5rNb71A&oe=65A111D3"
+                alt="Imagine 5"
+              />
+            </div>
+
+            <div class="image-container">
+              <img
+                src="https://scontent.fotp3-3.fna.fbcdn.net/v/t39.30808-6/387750900_812854704180337_6876273286280172914_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=3635dc&_nc_ohc=7WYVTa5BonsAX-gTScv&_nc_ht=scontent.fotp3-3.fna&oh=00_AfDQVRJOqTabrAwsz_O-QYgTnXoy-TApfduvi7M_Bl-6PA&oe=65A1440F"
+                alt="Imagine 6"
+              />
+            </div>
+
+            <div class="image-container">
+              <img
+                src="https://scontent.fotp3-4.fna.fbcdn.net/v/t39.30808-6/313429788_546529307479546_2275580803141008303_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=xjCmIj6cxa4AX8cOsm2&_nc_ht=scontent.fotp3-4.fna&oh=00_AfB3-SP9hx_0QUM_5083uVVmWt-KOgO57_WTfAavFF_e7w&oe=65A13BDA"
+                alt="Imagine 7"
+              />
+            </div>
+
+            <div class="image-container">
+              <img
+                src="https://scontent.fotp3-1.fna.fbcdn.net/v/t39.30808-6/309975932_517798210352656_6536168004405172908_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=3635dc&_nc_ohc=YLoYQ1BaiO4AX83y5zn&_nc_ht=scontent.fotp3-1.fna&oh=00_AfCAFt2LY-L0YEr4FsAIJPcmg8UlMO1kMPuwpGK6yqdALA&oe=65A07F94"
+                alt="Imagine 8"
+              />
+            </div>
+
+            <div class="image-container">
+              <img
+                src="https://scontent.fotp3-2.fna.fbcdn.net/v/t39.30808-6/311273833_532646158867861_7838728776817284484_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=Cl5XEwzaWpUAX8wIFvT&_nc_ht=scontent.fotp3-2.fna&oh=00_AfByf-pCtY5694Xl5a1ltEhvFSxla7pK2SNuyXBetXkNVw&oe=65A176A0"
+                alt="Imagine 9"
+              />
+            </div>
+          </div>
         </div>
 
         <div id="languages" class="page" style="display: none">

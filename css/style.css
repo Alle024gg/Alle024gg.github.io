@@ -6,9 +6,12 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background-image: url("/images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 header {
-  background: linear-gradient(10deg, rgb(7, 204, 239), transparent);
+  background: linear-gradient(10deg, rgb(7, 204, 239), transparent 50%);
 }
 
 #header-wrapper {
@@ -84,6 +87,7 @@ footer {
   display: none;
   flex: 1;
   background-color: #fff;
+
   padding: 24px;
   margin: 0 0 10px 0;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
@@ -185,3 +189,53 @@ td.favorite {
 }
 
 /* exercitii */
+
+.art {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
+}
+
+.digital {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tehnical {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
+}
+
+.other {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+.image-container:hover img {
+  transform: scale(1.1);
+}
