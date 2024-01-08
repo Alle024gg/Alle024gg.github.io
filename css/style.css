@@ -86,7 +86,7 @@ footer {
 .page {
   display: none;
   flex: 1;
-  background-color: #fff;
+  background-color: white;
 
   padding: 24px;
   margin: 0 0 10px 0;
