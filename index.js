@@ -16,7 +16,13 @@ function show(id) {
 
 function showPage(id) {
   console.info("show page", id);
+  var prevLink = document.querySelector("a[data-page=" + activePage + "]");
+  prevLink.classList.remove("active");
   hide(activePage);
+
+  var nextLink = document.querySelector("a[data-page=" + id + "]");
+  nextLink.classList.add("active");
+
   show(id);
   activePage = id;
 }
@@ -25,8 +31,9 @@ function initEvents() {
   var toolbar = document.querySelector("#top-menu-bar");
   toolbar.addEventListener("click", function (e) {
     if (e.target.matches("a")) {
-      var page = e.target.innerHTML.toLowerCase();
-      console.warn("event", page);
+      var page = e.target.dataset.page;
+      console.warn("click", page);
+      e.target.classList.add("active");
       showPage(page);
     }
   });
