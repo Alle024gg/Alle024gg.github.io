@@ -32,6 +32,6 @@ function initEvents() {
   });
 }
 
-// excutii
+// executii
 showPage(activePage);
 initEvents();
