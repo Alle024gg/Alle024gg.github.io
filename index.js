@@ -38,36 +38,27 @@ function initEvents() {
 }
 
 function showSkills() {
+  // = de la document da-mi skills ul
   var ul = document.querySelector("#skills ul");
-
+  //aray
   var skills = [
-    "Artistic Skills:",
-    "Painting",
-    "Jewelry Making",
-    "Sketching and Illustration",
-    "Graphic Design (logos, promotional materials, graphics for various products)",
-    "",
-    "Design and Digital Graphics:",
-    "Animation and digital illustrations ",
-    "Creating and printing designs for personalized products",
-    "",
-    "Technical Skills and Education:",
-    "Studies in Marketing and Management (Bachelor's and Master's degrees)",
-    "Skills in time and project management",
-    "Experience in sales and entrepreneurship",
-    "Teaching certification",
-    "",
-    "Other Skills:",
-    "Knowledge of programming and web design (HTML, CSS, JavaScript)",
-    "Multitasking and time management abilities",
-    "Capability to work under pressure and self-motivate",
-    "Communication and teamwork skills",
-    "Experience in using online business platforms and tools",
+    {
+      name: "html",
+      endorcements: 6,
+    },
+    {
+      name: "css",
+      endorcements: 5,
+    },
+    {
+      name: "js",
+      endorcements: 4,
+    },
   ];
 
   var text = skills.map(function (skill) {
     console.info("inside %o map", skill);
-    return `<li>${skill}</li>`;
+    return `<li>${skill.name} <span> -${skill.endorcements}</span></li>`;
   });
   console.warn(text);
 

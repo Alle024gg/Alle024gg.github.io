@@ -240,6 +240,12 @@ td.favorite {
   transform: scale(1.1);
 }
 
+#skills li span {
+  color: gray;
+}
+
+/* exercitii*/
+
 #skills ul li:nth-child() {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
