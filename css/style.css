@@ -239,3 +239,15 @@ td.favorite {
 .image-container:hover img {
   transform: scale(1.1);
 }
+
+#skills ul li:nth-child() {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+#skills ul li:nth-child(1),
+#skills ul li:nth-child(7),
+#skills ul li:nth-child(11),
+#skills ul li:nth-child(17) {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}

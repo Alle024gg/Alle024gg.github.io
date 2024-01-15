@@ -40,7 +40,30 @@ function initEvents() {
 function showSkills() {
   var ul = document.querySelector("#skills ul");
 
-  var skills = ["HTML", "CSS", "JS"];
+  var skills = [
+    "Artistic Skills:",
+    "Painting",
+    "Jewelry Making",
+    "Sketching and Illustration",
+    "Graphic Design (logos, promotional materials, graphics for various products)",
+    "",
+    "Design and Digital Graphics:",
+    "Animation and digital illustrations ",
+    "Creating and printing designs for personalized products",
+    "",
+    "Technical Skills and Education:",
+    "Studies in Marketing and Management (Bachelor's and Master's degrees)",
+    "Skills in time and project management",
+    "Experience in sales and entrepreneurship",
+    "Teaching certification",
+    "",
+    "Other Skills:",
+    "Knowledge of programming and web design (HTML, CSS, JavaScript)",
+    "Multitasking and time management abilities",
+    "Capability to work under pressure and self-motivate",
+    "Communication and teamwork skills",
+    "Experience in using online business platforms and tools",
+  ];
 
   var text = skills.map(function (skill) {
     console.info("inside %o map", skill);
@@ -52,6 +75,9 @@ function showSkills() {
 }
 
 // excutii
+
 showSkills();
 showPage(activePage);
 initEvents();
+
+//exercitii
