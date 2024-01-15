@@ -4,21 +4,20 @@ var activePage = "skills";
 // functii publice
 
 function $(selector) {
-  console.info("gaseste elementul: %o", selector);
-
   var el = document.querySelector(selector);
-  console.info("elementul gasit este:", el);
+  //console.info("% found:", selector, el);
   return el;
 }
 
 function hide(id) {
   console.info("hide", id);
-  document.getElementById(id).style.display = "none";
+  $("#" + id).style.display = "none"; // ## face acelasi lucru cu urmatorul rand, cod<== inlocuieste cod --->
+  //document.getElementById(id).style.display = "none";//
 }
 
 function show(id) {
   console.info("show", id);
-  var page = document.getElementById(id);
+  var page = $(`#${id}`); // forma scurtata ca cea de mai sus ##
   console.debug("show page", page);
   page.style.display = "block";
 }
