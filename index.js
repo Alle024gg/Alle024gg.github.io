@@ -1,5 +1,5 @@
 // variable publice
-var activePage = "projects";
+var activePage = "skills";
 
 // functii publice
 function hide(id) {
@@ -22,7 +22,6 @@ function showPage(id) {
 
   var nextLink = document.querySelector(`a[data-page=${id}]`);
   nextLink.classList.add("active");
-
   show(id);
   activePage = id;
 }
@@ -33,12 +32,26 @@ function initEvents() {
     if (e.target.matches("a")) {
       var page = e.target.dataset.page;
       console.warn("click", page);
-      e.target.classList.add("active");
       showPage(page);
     }
   });
 }
 
-// executii
+function showSkills() {
+  var ul = document.querySelector("#skills ul");
+
+  var skills = ["HTML", "CSS", "JS"];
+
+  var text = skills.map(function (skill) {
+    console.info("inside %o map", skill);
+    return `<li>${skill}</li>`;
+  });
+  console.warn(text);
+
+  ul.innerHTML = text.join("");
+}
+
+// excutii
+showSkills();
 showPage(activePage);
 initEvents();
