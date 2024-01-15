@@ -2,6 +2,15 @@
 var activePage = "skills";
 
 // functii publice
+
+function $(selector) {
+  console.info("gaseste elementul: %o", selector);
+
+  var el = document.querySelector(selector);
+  console.info("elementul gasit este:", el);
+  return el;
+}
+
 function hide(id) {
   console.info("hide", id);
   document.getElementById(id).style.display = "none";
@@ -16,18 +25,18 @@ function show(id) {
 
 function showPage(id) {
   console.info("show page", id);
-  var prevLink = document.querySelector("a[data-page=" + activePage + "]");
+  var prevLink = $("a[data-page=" + activePage + "]");
   prevLink.classList.remove("active");
   hide(activePage);
 
-  var nextLink = document.querySelector(`a[data-page=${id}]`);
+  var nextLink = $(`a[data-page=${id}]`);
   nextLink.classList.add("active");
   show(id);
   activePage = id;
 }
 
 function initEvents() {
-  var toolbar = document.querySelector("#top-menu-bar");
+  var toolbar = $("#top-menu-bar");
   toolbar.addEventListener("click", function (e) {
     if (e.target.matches("a")) {
       var page = e.target.dataset.page;
@@ -39,7 +48,7 @@ function initEvents() {
 
 function showSkills() {
   // = de la document da-mi skills ul
-  var ul = document.querySelector("#skills ul");
+  var ul = $("#skills ul");
   //aray
   var skills = [
     {
@@ -78,7 +87,7 @@ function showSkills() {
   ul.innerHTML = text.join("");
 }
 
-// excutii
+// executii
 
 showSkills();
 showPage(activePage);
