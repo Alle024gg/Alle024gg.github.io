@@ -45,32 +45,12 @@ function initEvents() {
   });
 }
 
-function showSkills() {
+function showSkills(skills) {
+  console.info("skills:", skills);
   // = de la document da-mi skills ul
   var ul = $("#skills ul");
   //aray
-  var skills = [
-    {
-      name: "html",
-      endorcements: 6,
-      favorite: true,
-    },
-    {
-      name: "css",
-      endorcements: 5,
-    },
-    {
-      name: "js",
-      endorcements: 4,
-      favorite: true,
-    },
-
-    {
-      name: "word",
-      endorcements: 1,
-      favorite: false,
-    },
-  ];
+  // var skills = [];
 
   var text = skills.map(function (skill) {
     var cls = "";
@@ -88,7 +68,7 @@ function showSkills() {
 
 // executii
 
-showSkills();
+//showSkills([]);
 showPage(activePage);
 initEvents();
 
