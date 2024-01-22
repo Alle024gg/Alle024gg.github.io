@@ -1,21 +1,21 @@
 [
   {
     "name": "html",
-    "endorsements": 6,
+    "endorcements": 6,
     "favorite": true
   },
   {
     "name": "css",
-    "endorsements": 5
+    "endorcements": 5
   },
   {
     "name": "js",
-    "endorsements": 4,
+    "endorcements": 4,
     "favorite": true
   },
   {
     "name": "word",
-    "endorsements": 1,
+    "endorcements": 1,
     "favorite": false
   }
 ]
