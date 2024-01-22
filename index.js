@@ -45,12 +45,19 @@ function initEvents() {
   });
 }
 
+function sortSkillsByEndorcements(a, b) {
+  console.info("sort", a, b);
+  return b.endorcements - a.endorcements;
+}
+
+function sortByName(a, b) {
+  return a.name.localeCompare(b.name);
+}
+
 function showSkills(skills) {
-  console.info("skills:", skills);
-  // = de la document da-mi skills ul
+  // skills.sort(sortSkillsByEndorcements);
+  skills.sort(sortByName);
   var ul = $("#skills ul");
-  //aray
-  // var skills = [];
 
   var text = skills.map(function (skill) {
     var cls = "";
