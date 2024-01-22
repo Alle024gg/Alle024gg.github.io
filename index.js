@@ -66,10 +66,21 @@ function showSkills(skills) {
   ul.innerHTML = text.join("");
 }
 
-// executii
+function loadSkills() {
+  var promise = fetch("skills.json");
+  promise.then(function (r) {
+    const jsonPromise = r.json();
+    jsonPromise.then(function (skills) {
+      showSkills(skills);
+    });
+  });
+}
 
+// executii
 //showSkills([]);
+
 showPage(activePage);
 initEvents();
+loadSkills();
 
 //exercitii
