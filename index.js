@@ -68,6 +68,7 @@ function showSkills(skills) {
     console.info("%o (%o)", skill.name, cls);
     return `<li class="${cls}">${skill.name} <span> - ${skill.endorcements}</span></li>`;
   });
+
   console.warn(text);
 
   ul.innerHTML = text.join("");

@@ -74,40 +74,13 @@ header {
 }
 footer {
   padding: 10px 10px 8px 10px;
-  background-color: #057988;
+  background: linear-gradient(45deg, #00bcd4, #8a4dff);
   color: #f5f5f5;
   display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
   gap: 5px;
-}
-
-.page {
-  display: none;
-  flex: 1;
-  position: relative;
-  background-image: url("/images/background.png");
-  background-position: center;
-  background-size: cover;
-  padding: 24px;
-  margin: 0 0 10px 0;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  color: rgb(0, 0, 0);
-}
-.page::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.8)
-  );
 }
 
 .page > h2 {
@@ -127,11 +100,13 @@ th {
 
 #top-menu-bar {
   text-align: center;
-  background-color: #334455;
+  background: linear-gradient(45deg, #00bcd4, #8a4dff);
+  transition: background 0.3s ease;
   color: #fff;
   margin: 0;
   padding: 2;
 }
+
 .sticky {
   position: fixed;
   top: 0;
@@ -272,4 +247,57 @@ td.favorite {
 #skills ul li:nth-child(17) {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+}
+#galerie {
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+}
+
+.custom-button {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  background: linear-gradient(45deg, #00bcd4, #8a4dff);
+  transition: background 0.3s ease;
+  position: sticky;
+}
+
+.custom-button:hover {
+  background: linear-gradient(45deg, #ff4081, #8a4dff);
+}
+.page {
+  display: none;
+  flex: 1;
+  position: relative;
+  background-image: url("/images/background.png");
+  background-position: center;
+  background-size: cover;
+  padding: 24px;
+  margin: 0 0 10px 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  color: rgb(0, 0, 0);
+}
+.page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.5)
+  );
+}
+
+p span {
+  font-size: 50px;
 }
