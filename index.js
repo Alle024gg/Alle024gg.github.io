@@ -1,23 +1,21 @@
-// variable publice globale
+// variable publice
 let activePage = "skills";
 
 // functii publice
-
 function $(selector) {
   const el = document.querySelector(selector);
-  //console.info("% found:", selector, el);
+  // console.info("%o found:", selector, el);
   return el;
 }
 
 function hide(id) {
-  //  console.info("hide", id);
-  $("#" + id).style.display = "none"; // ## face acelasi lucru cu urmatorul rand, cod<== inlocuieste cod --->
-  //document.getElementById(id).style.display = "none";//
+  // console.info("hide", id);
+  $("#" + id).style.display = "none";
 }
 
 function show(id) {
   // console.info("show", id);
-  const page = $(`#${id}`); // forma scurtata ca cea de mai sus ##
+  const page = $(`#${id}`);
   // console.debug("show page", page);
   page.style.display = "block";
 }
@@ -33,13 +31,13 @@ function showPage(id) {
   show(id);
   activePage = id;
 }
-//meniu
+
 function initEvents() {
   const toolbar = $("#top-menu-bar");
-  toolbar.addEventListener("click", function (e) {
+  toolbar.addEventListener("click", (e) => {
     if (e.target.matches("a")) {
       const page = e.target.dataset.page;
-      console.warn("click %0", page);
+      console.warn("click %o", page);
       showPage(page);
     }
   });
@@ -55,11 +53,11 @@ function sortByName(a, b) {
 }
 
 function showSkills(skills) {
-  // skills.sort(sortSkillsByEndorcements);
+  //skills.sort(sortSkillsByEndorcements);
   skills.sort(sortByName);
   const ul = $("#skills ul");
 
-  const text = skills.map(function (skill) {
+  const text = skills.map((skill) => {
     let cls = "";
     if (skill.favorite == true) {
       cls = "favorite";
@@ -68,25 +66,20 @@ function showSkills(skills) {
     console.info("%o (%o)", skill.name, cls);
     return `<li class="${cls}">${skill.name} <span> - ${skill.endorcements}</span></li>`;
   });
-
   console.warn(text);
 
   ul.innerHTML = text.join("");
 }
 
 function loadSkills() {
-  fetch("skills.json").then(function (r) {
-    r.json().then(function (skills) {
-      showSkills(skills); //array
+  fetch("skills.json").then((r) => {
+    r.json().then((skills) => {
+      showSkills(skills);
     });
   });
 }
 
-// executii
-//showSkills([]);
-//start executie
+// excutii
 showPage(activePage);
 initEvents();
 loadSkills();
-
-//exercitii
