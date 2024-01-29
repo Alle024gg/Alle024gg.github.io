@@ -1,45 +1,45 @@
-// variable publice
-var activePage = "skills";
+// variable publice globale
+let activePage = "skills";
 
 // functii publice
 
 function $(selector) {
-  var el = document.querySelector(selector);
+  const el = document.querySelector(selector);
   //console.info("% found:", selector, el);
   return el;
 }
 
 function hide(id) {
-  console.info("hide", id);
+  //  console.info("hide", id);
   $("#" + id).style.display = "none"; // ## face acelasi lucru cu urmatorul rand, cod<== inlocuieste cod --->
   //document.getElementById(id).style.display = "none";//
 }
 
 function show(id) {
-  console.info("show", id);
-  var page = $(`#${id}`); // forma scurtata ca cea de mai sus ##
-  console.debug("show page", page);
+  // console.info("show", id);
+  const page = $(`#${id}`); // forma scurtata ca cea de mai sus ##
+  // console.debug("show page", page);
   page.style.display = "block";
 }
 
 function showPage(id) {
-  console.info("show page", id);
-  var prevLink = $("a[data-page=" + activePage + "]");
+  // console.info("show page", id);
+  const prevLink = $("a[data-page=" + activePage + "]");
   prevLink.classList.remove("active");
   hide(activePage);
 
-  var nextLink = $(`a[data-page=${id}]`);
+  const nextLink = $(`a[data-page=${id}]`);
   nextLink.classList.add("active");
   show(id);
   activePage = id;
 }
-
+//meniu
 function initEvents() {
-  var toolbar = $("#top-menu-bar");
+  const toolbar = $("#top-menu-bar");
   toolbar.addEventListener("click", function (e) {
     if (e.target.matches("a")) {
-      var page = e.target.dataset.page;
-      console.warn("click", page);
+      const page = e.target.dataset.page;
+      console.warn("click %0", page);
       showPage(page);
     }
   });
@@ -57,10 +57,10 @@ function sortByName(a, b) {
 function showSkills(skills) {
   // skills.sort(sortSkillsByEndorcements);
   skills.sort(sortByName);
-  var ul = $("#skills ul");
+  const ul = $("#skills ul");
 
-  var text = skills.map(function (skill) {
-    var cls = "";
+  const text = skills.map(function (skill) {
+    let cls = "";
     if (skill.favorite == true) {
       cls = "favorite";
     }
@@ -77,14 +77,14 @@ function showSkills(skills) {
 function loadSkills() {
   fetch("skills.json").then(function (r) {
     r.json().then(function (skills) {
-      showSkills(skills);
+      showSkills(skills); //array
     });
   });
 }
 
 // executii
 //showSkills([]);
-
+//start executie
 showPage(activePage);
 initEvents();
 loadSkills();
