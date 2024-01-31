@@ -220,6 +220,7 @@ td.favorite {
 }
 .image-container {
   overflow: hidden;
+  border-radius: 15px;
 }
 
 .image-container img {
@@ -258,7 +259,7 @@ td.favorite {
 .custom-button {
   display: block;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 15px;
   font-size: 16px;
   text-align: center;
   text-decoration: none;
@@ -291,13 +292,17 @@ td.favorite {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(
+  /*background: linear-gradient(
     rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.5)
-  );
+  );*/
 }
 
 p span {
   font-size: 50px;
+}
+
+#⬇Explore {
+  text-align: center;
 }
