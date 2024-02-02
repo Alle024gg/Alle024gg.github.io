@@ -221,6 +221,8 @@ td.favorite {
 .image-container {
   overflow: hidden;
   border-radius: 15px;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.4);
+  margin: 5px;
 }
 
 .image-container img {
