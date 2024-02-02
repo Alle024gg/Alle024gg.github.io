@@ -118,18 +118,23 @@
             changegenereazaButton.textContent = "See again";
 
             changegenereazaButton.addEventListener("click", function () {
-              plantaSection.removeChild(newImageContainer);
-              const originalImageContainer = document.createElement("div");
-              originalImageContainer.classList.add("coperta_planta");
-              const originalImage = document.createElement("img");
-              originalImage.src = "images/first.png";
-              originalImage.alt = "Plant Image";
-              originalImageContainer.appendChild(originalImage);
-              plantaSection.replaceChild(
-                originalImageContainer,
-                changegenereazaButton
-              );
+              const plantaSection = document.querySelector(".planta");
+              const copertaPlanta = document.querySelector(".coperta_planta");
               changegenereazaButton.textContent = "See what plant U are";
+              if (plantaSection.contains(newImageContainer)) {
+                plantaSection.removeChild(newImageContainer);
+                const originalImageContainer = document.createElement("div");
+                originalImageContainer.classList.add("coperta_planta");
+                const originalImage = document.createElement("img");
+                originalImage.src = "images/first.png";
+                originalImage.alt = "Plant Image";
+                originalImageContainer.appendChild(originalImage);
+                plantaSection.replaceChild(
+                  originalImageContainer,
+                  changegenereazaButton
+                );
+                changegenereazaButton.textContent = "See what plant U are";
+              }
             });
           });
         </script>
