@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   background-image: url("/images/background.png");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
 }
 header {
   background: linear-gradient(10deg, rgb(7, 204, 239), transparent 50%);
@@ -215,8 +215,8 @@ td.favorite {
 
 .image-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10;
 }
 .image-container {
   overflow: hidden;
